@@ -57,8 +57,7 @@ export class AddLabResult extends React.Component {
 		Appointment.addLabResult(dataJson).then(response => {
 			if(response.status === 200) {
 				this.setState({
-					loading: false,
-					pasien: response.result
+					loading: false
 				})
 				alert(`Sukses tambah hasil lab pasien ${this.state.pasien.nama}`)
 			} else {

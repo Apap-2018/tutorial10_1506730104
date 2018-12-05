@@ -30,11 +30,11 @@ export const FormAddLabResult = (props) => {
                 <input type="text" className="form-control" name="nama" defaultValue={props.pasien.nama} readOnly/>
             </div>
             <div className="form-group">
-                <label>Tanggal Pengajuan</label>
-                <input type="date" className="form-control" name="tanggalPengajuan" defaultValue={!props.pasien.tanggalRujukan ? "" : props.pasien.tanggalRujukan}/>
+                <label>Tanggal Pengajuan<span style={{ color: 'red' }}>*</span></label>
+                <input type="date" className="form-control" name="tanggalPengajuan"/>
             </div>
             <div className="form-group">
-                <label>Jenis</label>
+                <label>Jenis<span style={{ color: 'red' }}>*</span></label>
                 <select className="form-control" name="jenis">
                     <option value="">Pilih jenis bahan penelitian</option>
                     {Object.keys(jenis).map(key => {

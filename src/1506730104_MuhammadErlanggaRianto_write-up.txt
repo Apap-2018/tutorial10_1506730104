@@ -6,16 +6,23 @@ cors adalah API yang meng-enable cross-origin requests sehingga kita dapat melak
 fetch data dari API mana saja. apabila prefix tersebut dihilangkan maka kita tidak
 dapat melakukan request untuk fetch data dari API SI-Appointment
 
-2. Pada fungsi handleFormSubmit(e) di UpdatePasien.jsx terdapat klausa:
-Apa yang dilakukan pada code tersebut? Jika klausa tersebut diganti dengan
-“dataJson[key] = val”, apa yang terjadi dengan isi variable dataJson?
+2. Pada fungsi handleFormSubmit(e) di UpdatePasien.jsx terdapat klausa: Apa yang dilakukan pada code tersebut?
+loop satu-persatu isi atribut apabila suatu atribut di json memiliki atribut nested
+Jika klausa tersebut diganti dengan “dataJson[key] = val”, apa yang terjadi dengan isi variable dataJson?
+melewatkan isi dari atribut yang dinested 
 
 ---
 Latihan
 1. Tambahkan menu pada navbar untuk menampilkan daftar seluruh staf Farmasi, dan
 implementasikan pagenya hingga menampilkan data seperti pada page daftar pasien.
-
+Membuat link pada navbar beserta route nya. setelah itu membuat laman screen untuk daftar staff farmasi.
+lalu membuat component daftarstafffarmasirow yang akan ditampilkan di screen. membuat method di appointment.js
+untuk fetch data staff farmasi dari API SI-Appointment. memanggil method untuk fetch data di dalam screen.
 
 2. Pada daftar pasien, tambahkan button untuk menambahkan hasil lab pasien, yang jika
 diklik maka akan menampilkan form untuk menginput hasil lab pasien.
 Implementasikan form hingga berhasil melakukan request POST ke SI-Appointment.
+Membuat button tambah hasil lab pada daftar pasien beserta route nya. setelah itu membuat laman screen untuk
+add lab result. lalu membuat container form dari tambah hasil lab yang akan ditampilkan di screen.
+membuat method di appointment.js untuk post data hasil lab ke API SI-Appointment.
+memanggil method untuk post data di dalam screen ketika form yang telah diisi disubmit.

@@ -1,0 +1,21 @@
+Pertanyaan
+1. Pada setiap fungsi di Appointment.js, parameter pertama pasti memiliki prefix
+“${cors}” yang merefer pada variable cors. Mengapa hal tersebut perlu dilakukan?
+Apa yang terjadi jika prefix tersebut dihilangkan?
+cors adalah API yang meng-enable cross-origin requests sehingga kita dapat melakukan
+fetch data dari API mana saja. apabila prefix tersebut dihilangkan maka kita tidak
+dapat melakukan request untuk fetch data dari API SI-Appointment
+
+2. Pada fungsi handleFormSubmit(e) di UpdatePasien.jsx terdapat klausa:
+Apa yang dilakukan pada code tersebut? Jika klausa tersebut diganti dengan
+“dataJson[key] = val”, apa yang terjadi dengan isi variable dataJson?
+
+---
+Latihan
+1. Tambahkan menu pada navbar untuk menampilkan daftar seluruh staf Farmasi, dan
+implementasikan pagenya hingga menampilkan data seperti pada page daftar pasien.
+
+
+2. Pada daftar pasien, tambahkan button untuk menambahkan hasil lab pasien, yang jika
+diklik maka akan menampilkan form untuk menginput hasil lab pasien.
+Implementasikan form hingga berhasil melakukan request POST ke SI-Appointment.

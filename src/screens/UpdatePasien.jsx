@@ -62,12 +62,12 @@ export class UpdatePasien extends React.Component {
 					loading: false,
 					pasien: response.result
 				})
-				alert(`Sukses update pasien $(this.state.pasien.nama)`)
+				alert(`Sukses update pasien ${this.state.pasien.nama}`)
 			} else {
 				this.setState({
 					loading:false
 				})
-				alert(`Gagal update pasien $(this.state.pasien.nama)`)
+				alert(`Gagal update pasien ${this.state.pasien.nama}`)
 			}
 		})
 	}

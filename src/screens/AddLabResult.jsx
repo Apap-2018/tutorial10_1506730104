@@ -44,12 +44,10 @@ export class AddLabResult extends React.Component {
 
 		data.forEach((val,key) => {
 			if(val !== "") {
-				let name = key.split('.')
-				if(name.length > 1) {
-					let last = name.pop()
-					name.reduce((prev, next) => {
-						return prev[next] = prev[next] || {};
-					}, dataJson)[last] = val
+				if(key === "id") {
+					const jsonId = {}
+					jsonId["id"] = val
+					dataJson["pasien"] = jsonId
 				} else {
 					dataJson[key] = val
 				}
@@ -62,12 +60,12 @@ export class AddLabResult extends React.Component {
 					loading: false,
 					pasien: response.result
 				})
-				alert(`Sukses tambah hasil lab pasien $(this.state.pasien.nama)`)
+				alert(`Sukses tambah hasil lab pasien ${this.state.pasien.nama}`)
 			} else {
 				this.setState({
 					loading:false
 				})
-				alert(`Gagal tambah hasil lab pasien $(this.state.pasien.nama)`)
+				alert(`Gagal tambah hasil lab pasien ${this.state.pasien.nama}`)
 			}
 		})
 	}
